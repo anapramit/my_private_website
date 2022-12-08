@@ -1,0 +1,17 @@
+{
+    "site_name": "Stwórz nowy link",
+    "send": "Stwórz link",
+    "link_page": "Podaj link do strony",
+
+    "descript_new": "Ukryj zawartość linku. Rozpocznij zabawę:",
+    "descript_new_2": "Podaj nowy link np:       Pod tym linkiem skrywa się najpiękniejsza kobieta świata",
+    "copy_link": "Kopiuj link",
+    "create_succes": "Link został utworzony! Teraz możesz go udostępnić",
+
+    "err_link_invalid": "Nieprawidłowy link",
+    "err_empty": "Puste pole",
+    "err_link_special_characters": "Niedozwolone znaki to ",
+    "err_wrong_recaptcha": "Jesteś botem?",
+    "err_database": "Wystąpił problem z połączeniem",
+    "err_alredy_link": "Istnieje już taki link. Proszę podać nowy"
+}

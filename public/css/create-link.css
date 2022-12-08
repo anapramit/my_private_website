@@ -1,0 +1,104 @@
+
+    h1 {
+    color: rgb(190, 145, 145);
+    text-align: center;
+    }
+
+    .div-create-link {
+        width: fit-content;
+        max-width: 600px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-width: 5px;
+        border-color: rgb(111, 111, 119);
+        border-radius: 10px;
+        margin-bottom: 100px;
+    }
+
+    #input_old_link{
+        min-height: 50px;
+    }
+    #input_new_link {
+        height: 200px;
+    }
+    textarea {
+        resize: none;
+    }
+
+    #input_new_link,  #input_old_link {
+        background: rgb(156, 156, 156);
+        color:black;
+        width: 500px;
+      }
+    
+    .input-submit {
+        min-width: 150px;
+        min-height: 40px;
+        border: none;
+        border-radius: 100px;
+        text-shadow: 0 5px 20px rgba(110, 42, 26, 0.4), 0 2px 2px rgba(192, 36, 0, 0.4);
+        background-image: radial-gradient(
+            100% 75% at 50% 100%,
+            #fed262 5%,
+            #811913 95%);
+        box-shadow: inset 0 3px 15px 0 rgb(150, 80, 64);
+        background: rgb(71, 71, 80);
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+    }
+    
+    .input-submit:hover {
+        background: rgb(114, 114, 150);
+    }
+   
+@media screen and (max-width: 600px){
+    #input_new_link,  #input_old_link {
+        width: 100%;
+      }
+      .div-create-link {
+        width: 96%;
+       
+      }
+}
+
+.errors {
+    margin:0;
+    color:rgb(173, 98, 98);
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size: 19px;
+    font-weight:700;
+    text-align: center;
+  }
+
+  #label_link {
+    color: rgb(168, 197, 100);
+    margin-top:30px;
+    margin-bottom:10px;
+    font-size: 19px;
+    font-weight:700;
+  }
+  .link-send-1 {
+    color: rgb(42, 131, 42);
+    margin-top:30px;
+    margin-bottom:10px;
+    font-size: 19px;
+    font-weight:700;
+  }
+
+
+  .link-send-2{
+        border-style: solid;
+        border-width: 5px;
+        border-color: rgb(77, 77, 139);
+        color:black;
+        border-radius: 100px;
+        padding: 30px;
+        margin-bottom: 20px;
+        background-color: rgb(228, 213, 213);
+        cursor: pointer;
+  }

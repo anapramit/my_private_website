@@ -1,0 +1,64 @@
+
+ #recaptcha-div {
+    text-align: center;
+  }
+
+  #recaptcha {
+   display:inline-block;
+   -webkit-transform: scale(0.90);
+   -moz-transform: scale(0.90);
+    -ms-transform: scale(0.90);
+     -o-transform: scale(0.90);
+        transform: scale(0.90);
+ -webkit-transform-origin: 0 10;
+    -moz-transform-origin: 0 10;
+     -ms-transform-origin: 0 10;
+      -o-transform-origin: 0 10;
+         transform-origin: 0 10;
+  }
+
+
+  @media screen and (max-width:330px) {
+    #recaptcha-div { 
+      position:relative;
+      text-align: none;
+      margin-left:5px;
+      height:fit-content;
+    }
+ 
+    #recaptcha {
+      transform:scale(0.55);
+      -moz-transform: scale(0.55);
+      -ms-transform: scale(0.55);
+       -o-transform: scale(0.55);
+      -webkit-transform:scale(0.55);
+      transform-origin:0 1;
+      -webkit-transform-origin:0 1;
+      height:fit-content;
+    }
+
+   }
+
+
+
+ @media screen and (min-width:330px) and (max-width:400px) {
+
+  /* #recaptcha-div { 
+    position:relative;
+    text-align: none;
+
+  } */
+
+  #recaptcha {
+    transform:scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+     -o-transform: scale(0.85);
+    -webkit-transform:scale(0.85);
+    transform-origin:0 10;
+    -webkit-transform-origin:0 10;
+  }
+
+
+
+ }

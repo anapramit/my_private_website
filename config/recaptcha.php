@@ -1,0 +1,3 @@
+<?php
+define('RECPATCHA_PUBLIC_KEY', '6LfjS9keAAAAAP5QiMyIldqDRG_S1igMnDlO5Nwb');
+define('RECPATCHA_PRIVATE_KEY', '6LfjS9keAAAAAHTloGPPP-W1dKkodxcwYkJqUcJV');

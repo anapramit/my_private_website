@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% set vars = getVariables('help') %}
+       
+        {% include 'start_html.html.twig' %}
+
+    </head>   
+<body>
+
+{% include 'nawigation.html.twig' %}
+
+
+
+{% set cookies = getVariables('cookies') %}
+<div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
+
+{% include 'footer.html.twig' %}
+
+</body>
+</html>

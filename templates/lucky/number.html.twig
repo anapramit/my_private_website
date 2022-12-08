@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% set vars = getVariables('number') %}
+        
+        {% include 'start_html.html.twig' %}
+
+        <link rel="stylesheet" href="/css/create-link.css">
+        <link rel="stylesheet" href="/css/recaptcha.css">
+        {% if is_send_link is defined %}
+        <script src="/js/copy-link.js" defer></script>
+        {% else %}
+        <script src="/js/create-link.js" defer></script>
+        {% endif %}
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <style>
+          #recaptcha_image { width:auto !important; max-width: 100%; height: auto !important}
+       #recaptcha_image img { width:100% ;}
+       </style> 
+    </head>   
+<body>
+
+{% include 'nawigation.html.twig' %}
+
+{% if is_send_link is defined %}
+    <div class="div-create-link">
+    <p class="link-send-1">{{ vars.create_succes }}</p>
+    <p class="link-send-2" id="link-send" data-type="{{is_send_link}}">{{ is_send_link }}</p>
+    <button class="input-submit" id="copy-link"> {{vars.copy_link}}</button>
+    </div>
+{% else %}
+    <div class="div-create-link">
+        <form method="post" action="">
+            <div class="form-floating mb-3">
+                <input type="url" class="form-control" id="input_old_link" name="old_link" placeholder="{{vars.link_page}}" value="{{number.old_link}}" minlength="6" maxlength="2000">
+                <p class="errors">{% if errors.old_link is defined %}{{ errors.old_link }} {% endif %}</p>
+            </div>
+            <div class="form-floating mb-3">
+                <label id="label_link" for="input_new_link">{{vars.descript_new}}</label>
+                <textarea type="text" class="form-control" id="input_new_link" name="new_link" placeholder="{{vars.descript_new_2}}" minlength="3" maxlength="2000">{% if is_empty != 1%}{{number.new_link}}{%endif%}</textarea>
+                <p class="errors">{% if errors.new_link is defined %}{{ errors.new_link }} {% endif %}</p>
+            </div>
+            <div id="recaptcha-div">
+                <div class="g-recaptcha" id="recaptcha" data-sitekey="{{ getCaptchaPublicKey() }}" data-theme="dark"></div>
+                <p class="errors">{% if errors.recaptcha is defined %}{{ errors.recaptcha }}{%endif%}</p>
+              </div>
+            <input type="submit" class="input-submit" value="{{vars.send}}">
+            <p class="errors">{% if errors.database is defined %}{{ errors.database }} {% endif %}</p>
+        </form>
+    </div>
+{% endif %}
+
+{% set cookies = getVariables('cookies') %}
+<div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
+
+{% include 'footer.html.twig' %}
+</body>
+</html>

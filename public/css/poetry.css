@@ -1,0 +1,53 @@
+.poetry-component {
+    width: fit-content;
+    max-width: 90%;
+    min-width: 500px;
+    margin-left:auto;
+    margin-right:auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(101, 101, 184);
+    border-radius: 10px;
+    margin-bottom: 100px;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%, rgba(121,89,9,1) 100%);
+    padding: 20px;
+}
+@media screen and (max-width:600px) {
+    .poetry-component {
+      width:98%;
+      max-width: 98%;
+      min-width: 98%;
+    }
+    
+  }
+
+.component-click {
+    width: fit-content;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 20px;
+}
+.peotry-text {
+    text-align:center;
+    color:rgb(0, 0, 0)
+}
+.icon-poetry {
+    border-radius: 100px;
+    background-color: rgb(0, 130, 153);
+    cursor: pointer;
+}
+
+.icon-poetry:hover {
+    border-radius: 10px;
+    background-color: rgb(87, 160, 173);
+}
+
+.information-click, .icon-poetry {
+    display: inline-block;
+}
+
+.information-click {
+   color: black;
+   padding: 10px;
+}

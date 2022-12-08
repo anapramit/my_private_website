@@ -1,0 +1,15 @@
+#footer-test {
+    color:rgba(0, 0, 0, 0.2);
+}
+
+.language-line, #footer-text {
+    display: inline-block;
+}
+
+li{
+    list-style-type:none;
+}
+#id-footer {
+    clear:both;
+    padding:20px;
+}

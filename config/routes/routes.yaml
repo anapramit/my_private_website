@@ -1,0 +1,30 @@
+# config/routes.yaml
+
+# the "app_lucky_number" route name is not important yet
+app_lucky_number:
+    path: /create-link
+    controller: App\Controller\NumberController::number
+
+change_Lang_Controller:
+    path: /change-lang
+    controller: App\Controller\ChangeLangController::run
+
+poetry_Controller:
+    path: /poetry
+    controller: App\Controller\PoetryController::poetry
+
+help_Controller:
+    path: /help
+    controller: App\Controller\HelpController::help
+
+regulation_Controller:
+    path: /link-building-rules
+    controller: App\Controller\RegulationController::regulation
+
+go_link:
+    path: /__{token}
+    controller: App\Controller\GoLinkController::link
+    requirements:
+      token: .+
+
+
