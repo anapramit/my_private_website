@@ -8,13 +8,16 @@ class GoLinkController extends AbstractController
 
     public function link(): Response
     {
-        $where_go = htmlspecialchars($_SERVER['PATH_INFO']);
-        $where_go = substr($where_go, 3);
+        $where_go = htmlspecialchars($_SERVER['REQUEST_URI']);
+        $where_go = urldecode($where_go);
+        $where_go = htmlspecialchars($where_go);
+        $where_go = substr($where_go, 3); 
         $is_true = true;
+        
         $langVars = \App\Lib\LanguageManager::getVariables('error_information');
         //
         if(!empty($where_go)) {     
-            if(mb_strlen($where_go) > 1900 || mb_strlen($where_go) < 6) {
+            if(mb_strlen($where_go) > 1900 || mb_strlen($where_go) < 5) {
                 $is_true = false;
             }
             if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]/', $where_go)){

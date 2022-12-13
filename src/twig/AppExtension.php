@@ -13,7 +13,8 @@ class AppExtension extends AbstractExtension
             new TwigFunction('setPage', [$this, 'setPage']),
             new TwigFunction('getVariables', [$this, 'getVariables']),
             new TwigFunction('getLangVariables', [$this, 'getLangVariables']),
-            new TwigFunction('getCaptchaPublicKey', [$this, 'getCaptchaPublicKey'])
+            new TwigFunction('getCaptchaPublicKey', [$this, 'getCaptchaPublicKey']),
+            new TwigFunction('getCaptchaPublicKey2', [$this, 'getCaptchaPublicKey2'])
         ];
     }
     
@@ -37,9 +38,14 @@ class AppExtension extends AbstractExtension
     }
 
     public static function getCaptchaPublicKey(){
-        //do zmiany
-        $error_lang = '/home/vard/my_project2/';
+        $error_lang = \App\Lib\PathWebsiteAndFile::pathwebsite(1);
         require $error_lang .'config/recaptcha.php';
         return RECPATCHA_PUBLIC_KEY;
+    }
+
+    public static function getCaptchaPublicKey2(){
+        $error_lang = \App\Lib\PathWebsiteAndFile::pathwebsite(1);
+        require $error_lang .'config/recaptcha.php';
+        return RECPATCHA_PUBLIC_KEY_2;
     }
 }

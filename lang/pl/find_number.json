@@ -1,0 +1,14 @@
+{
+    "site_name": "Check the link",
+    "send": "Check the link",
+    "link_page": "Provide a link to check",
+
+    "err_link_invalid": "Invalid link",
+    "err_empty": "Empty field",
+    "err_wrong_recaptcha": "Are you a bot?",
+    "err_database": "There is a maintenance problem",
+    "copy_link": "Copy link",
+    
+    "create_succes": "The given link exists. Here's what it leads to:",
+    "err_link_not_exist": "Such a link does not exist."
+}

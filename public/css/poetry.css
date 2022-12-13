@@ -1,3 +1,4 @@
+
 .poetry-component {
     width: fit-content;
     max-width: 90%;
@@ -6,9 +7,9 @@
     margin-right:auto;
     border-style: solid;
     border-width: 5px;
+    margin-bottom: 100px;
     border-color: rgb(101, 101, 184);
     border-radius: 10px;
-    margin-bottom: 100px;
     background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%, rgba(121,89,9,1) 100%);
     padding: 20px;

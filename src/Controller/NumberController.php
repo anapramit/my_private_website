@@ -3,7 +3,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Validator\Constraints\Length;
+
 
 // ...
 
@@ -56,8 +56,8 @@ class NumberController extends AbstractController
                     ]);
                     exit();
                 } else{
-                    //do zmiany
-                    $this_website = 'http://localhost:8000/__';
+                    $name_Path_Website = \App\Lib\PathWebsiteAndFile::pathwebsite(2);
+                    $this_website = $name_Path_Website . '/__';
                     $is_send_link = $this_website . $number['new_link'];
                     return $this->render('lucky/number.html.twig', [
                         'is_send_link' => $is_send_link
@@ -107,7 +107,7 @@ class NumberController extends AbstractController
                 break;
                 case 'new_link':
                     if(!empty($value)) {     
-                    if(mb_strlen($value) > 1900 || mb_strlen($value) < 6) {
+                    if(mb_strlen($value) > 1900 || mb_strlen($value) < 5) {
                         $errors->set($key, $langVars['err_link_invalid']);
                     }
                     if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]/', $value)){
@@ -136,8 +136,7 @@ class NumberController extends AbstractController
         }
         if (empty($errors->errors)) {
             if(!empty($number['g-recaptcha'])){
-                 //do zmiany
-                $error_lang = '/home/vard/my_project2/';
+                $error_lang = \App\Lib\PathWebsiteAndFile::pathwebsite(1);
                 require $error_lang . 'config/recaptcha.php';
                 $secret = RECPATCHA_PRIVATE_KEY;
                 $url = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='. $number['g-recaptcha']);

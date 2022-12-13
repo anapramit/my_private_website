@@ -4,21 +4,26 @@ if(window.onload = 'load'){
   }
   
   function decodeNow(a){
-  let video = a;
-  let text = document.getElementById(video).getAttribute('value'); 
-  let result = text.replace(/&lt;/g, "<");
-  result = result.replace(/&gt;/g, ">");
-  result = result.replace(/&quot;/g, '"');
-  // error hash &apos;
-  result = result.replace(/&apos;/g, "'");
-  result = result.replace(/&#039;/g, "'");
-  //
-  result = result.replace(/&amp;/g, '&');
-  document.getElementById(video).setAttribute('value', result);
+    let video = a;
+    let test1 = document.getElementById(video);
+    if(test1){
+      let text = document.getElementById(video).getAttribute('value'); 
+      let result = text.replace(/&lt;/g, "<");
+      result = result.replace(/&gt;/g, ">");
+      result = result.replace(/&quot;/g, '"');
+      // error hash &apos;
+      result = result.replace(/&apos;/g, "'");
+      result = result.replace(/&#039;/g, "'");
+      //
+      result = result.replace(/&amp;/g, '&');
+      document.getElementById(video).setAttribute('value', result);
+    }
   }
 
-  function decodeNow2(a){
-    let video = a;
+function decodeNow2(a){
+  let video = a;
+  let test1 = document.getElementById(video);
+  if(test1){
     let text = document.getElementById(video).innerHTML; 
     let result = text.replace(/&lt;/g, "<");
     result = result.replace(/&gt;/g, ">");
@@ -29,4 +34,5 @@ if(window.onload = 'load'){
     //
     result = result.replace(/&amp;/g, '&');
     document.getElementById(video).innerHTML = result;
-    }
+  }
+}

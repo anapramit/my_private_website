@@ -1,0 +1,12 @@
+{
+    "site_name": "Sprawdź link",
+    "send": "Sprawdź link",
+    "link_page": "Podaj link do sprawdzenia",
+
+    "err_link_invalid": "Nieprawidłowy link",
+    "err_empty": "Puste pole",
+    "err_wrong_recaptcha": "Jesteś botem?",
+    "err_database": "Wystąpił problem z połączeniem",
+    "copy_link": "Kopiuj",
+    "create_succes": "Ten link istneje. Oto co cię pod nim skrywa:"
+}

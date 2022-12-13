@@ -5,6 +5,10 @@ app_lucky_number:
     path: /create-link
     controller: App\Controller\NumberController::number
 
+find_number:
+    path: /find-link
+    controller: App\Controller\FindNumberController::FindNumber
+
 change_Lang_Controller:
     path: /change-lang
     controller: App\Controller\ChangeLangController::run
@@ -12,6 +16,10 @@ change_Lang_Controller:
 poetry_Controller:
     path: /poetry
     controller: App\Controller\PoetryController::poetry
+
+haiku_Controller:
+    path: /haiku
+    controller: App\Controller\HaikuController::haiku
 
 help_Controller:
     path: /help

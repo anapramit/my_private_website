@@ -48,9 +48,7 @@ class LanguageManager {
     }
 
     public static function readVariables($page, $lang) {
-        //zmienić podczas dodawania do bazy danych
-
-        $error_lang = '/home/vard/my_project2/';
+        $error_lang = \App\Lib\PathWebsiteAndFile::pathwebsite(1);
         return json_decode(file_get_contents($error_lang . "lang/$lang/" . $page . '.json'), true);
     }
   
