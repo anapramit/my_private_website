@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% set vars = getVariables('story') %}
+       
+        {% include 'start_html.html.twig' %}
+
+        <link rel="stylesheet" href="/css/poetry.css">
+        <link rel="stylesheet" href="/css/story.css">
+        <script src="/js/poetry.js" defer></script>
+        
+    </head>   
+<body>
+
+{% include 'nawigation.html.twig' %}
+    <div class="class-begin-book">
+    <div class="component-click">
+        <img src="/icons/arrow_left.svg" class="icon-poetry" id="click-befor" data-type="0" data-type2="{{vars.how_many}}">
+        <p class="information-click" id="information-click">0/{{vars.how_many}}</p>
+        <img src="/icons/arrow_right.svg" class="icon-poetry" id="click-next">
+    </div>
+    {% for i in 0..vars.how_many %}
+        {% if i == 0 %}
+            <div class="poetry-component" id="poetry-{{i}}" style="display:block">
+                <div class="peotry-text">
+                    <div> {{i}}</div>
+                    <a href="/Mirosław_Mitka-story/{{i}}" target="_blank">
+                        <img src="/icons/auto_stories.svg">
+                </a> 
+                </div>
+            </div>
+        {% else %}
+            <div class="poetry-component" id="poetry-{{i}}" style="display:none">
+                <div class="peotry-text">
+                    <div> {{i}}</div>
+                    <a href="/Mirosław_Mitka-story/{{i}}" target="_blank">
+                        <img src="/icons/auto_stories.svg">
+                    </a> 
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+
+    {% set cookies = getVariables('cookies') %}
+    <div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
+</div>
+{% include 'footer.html.twig' %}
+
+</body>
+</html>

@@ -6,36 +6,40 @@
         {% include 'start_html.html.twig' %}
 
         <link rel="stylesheet" href="/css/poetry.css">
+         <link rel="stylesheet" href="/css/poetry-2.css">
         <script src="/js/poetry.js" defer></script>
         
     </head>   
 <body>
 
 {% include 'nawigation.html.twig' %}
+<div class="class-begin-book">
+    <div class="component-click">
+        <img src="/icons/arrow_left.svg" class="icon-poetry" id="click-befor" data-type="0" data-type2="{{vars.how_many}}">
+        <p class="information-click" id="information-click">0/{{vars.how_many}}</p>
+        <img src="/icons/arrow_right.svg" class="icon-poetry" id="click-next">
+    </div>
+    {% for i in 0..vars.how_many %}
+        {% if i == 0 %}
+            <div class="poetry-component" id="poetry-{{i}}" style="display:block">
+                <div class="peotry-text">{% autoescape false %} {{ vars.poem[i] }} {%endautoescape%}</div>
+            </div>
+        {% else %}
+            <div class="poetry-component" id="poetry-{{i}}" style="display:none">
+                <div class="peotry-text">{% autoescape false %} {{ vars.poem[i] }} {%endautoescape%}</div>
+            </div>
+        {% endif %}
+    {% endfor %}
 
-<div class="component-click">
-    <img src="/icons/arrow_left.svg" class="icon-poetry" id="click-befor" data-type="0" data-type2="{{vars.how_many}}">
-    <p class="information-click" id="information-click">0/{{vars.how_many}}</p>
-    <img src="/icons/arrow_right.svg" class="icon-poetry" id="click-next">
+    {% set music = getVariables('music') %}
+    {% set musicmax = music.num %}
+    {% set musicnumber = random(0 , musicmax ) %}
+    <div style="display:none">
+    <iframe width="230" height="200" src="{{ music.song[musicnumber]}}" title="YouTube video player" frameborder="0" allow="autoplay"></iframe>
+    </div>
+    {% set cookies = getVariables('cookies') %}
+    <div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
 </div>
-{% for i in 0..43 %}
-    {% if i == 0 %}
-        <div class="poetry-component" id="poetry-{{i}}" style="display:block">
-            <div class="peotry-text">{% autoescape false %} {{ vars.poem[i] }} {%endautoescape%}</div>
-        </div>
-    {% else %}
-        <div class="poetry-component" id="poetry-{{i}}" style="display:none">
-            <div class="peotry-text">{% autoescape false %} {{ vars.poem[i] }} {%endautoescape%}</div>
-        </div>
-    {% endif %}
-{% endfor %}
-
-<div style="display:none">
-<iframe width="200" height="165" src="https://www.youtube.com/embed/L8HxKTty1WU?autoplay=1&loop=1&playlist=L8HxKTty1WU" title="YouTube video player" frameborder="0" allow="autoplay"></iframe>
-</div>
-{% set cookies = getVariables('cookies') %}
-<div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
-
 {% include 'footer.html.twig' %}
 
 </body>

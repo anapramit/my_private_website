@@ -11,12 +11,18 @@ class NumberController extends AbstractController
 {
     public function number(): Response
     {
+        $is_exist_get = \App\Lib\IsGetMethod::IsGetMethod();
+        if($is_exist_get == 1){
+            header('Location: /');
+            exit();
+        }
         $number = [];
         $number['old_link'] = '';
         $number['new_link'] = '';
         $is_empty = 1;
+        $response = new Response();
+        require ('Somefile.php');
         //
-     
         if(isset($_POST['old_link']) && isset($_POST['new_link']) && isset($_POST['g-recaptcha-response'])){
            $number['g-recaptcha']  = htmlspecialchars($_POST['g-recaptcha-response']);
            $number['old_link'] = htmlspecialchars($_POST['old_link']);

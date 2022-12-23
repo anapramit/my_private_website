@@ -8,8 +8,12 @@
         <link rel="stylesheet" href="/css/create-link.css">
         <link rel="stylesheet" href="/css/find-link.css">
         <link rel="stylesheet" href="/css/recaptcha.css">
-        
+    
+     {% if is_send_link is defined %}
+      <script src="/js/copy-link.js" defer></script>
+      {% else %}
         <script src="/js/create-link.js" defer></script>
+    {% endif %}
       
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <style>

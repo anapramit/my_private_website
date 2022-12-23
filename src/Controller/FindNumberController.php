@@ -8,8 +8,15 @@ class FindNumberController extends AbstractController
 
     public function FindNumber(): Response
     {
+        $is_exist_get = \App\Lib\IsGetMethod::IsGetMethod();
+        if($is_exist_get == 1){
+            header('Location: /find-link');
+            exit();
+        }
         $errors = [];
         $number['old_link'] = '';
+        $response = new Response();
+        require ('Somefile.php');
         if(isset($_POST['old_link']) && isset($_POST['g-recaptcha-response'])){
             $where_go = htmlspecialchars($_POST['old_link']);
             $number['old_link'] = $where_go;
@@ -37,9 +44,10 @@ class FindNumberController extends AbstractController
                     $how_obtained = $stmt_2-> rowCount();
                     if($how_obtained == 1 && !empty($data)){
                          $go = urldecode($data['to_website']);
+                         $js = 1;
                          return $this->render('lucky/find_number.html.twig', [
                             'is_send_link' => $go,
-                            'number' => $number
+                            'number' => $number,
                         ]);
                         exit();
                     }else{
@@ -53,7 +61,7 @@ class FindNumberController extends AbstractController
             }else{
                 return $this->render('lucky/find_number.html.twig', [
                     'errors' => $errors,
-                    'number' => $number
+                    'number' => $number,
                 ]);
                 exit();
             }

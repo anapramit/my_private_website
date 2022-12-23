@@ -24,17 +24,20 @@ class LanguageManager {
 
         if(!isset($_SESSION['lang'])) {
             $langs = self::preferedLanguage(self::$avaliableLanguages, htmlspecialchars($_SERVER['HTTP_ACCEPT_LANGUAGE']));
-
             if(empty($langs)) {
+                $_SESSION['lang'] = 'en';
                 return 'en';
             }else{
                 $lang = array_keys($langs)[0];
+                $_SESSION['lang'] = $lang;
                 switch ($lang) {
                     case 'en': 
                     case 'pl':
                     case 'ua': return $lang;
                         break;
-                    default: return 'en';
+                    default:
+                    $_SESSION['lang'] = 'en';
+                     return 'en';
                 }
             }
         }else{
@@ -81,5 +84,4 @@ class LanguageManager {
     
         return $langs;
     }
-
 }

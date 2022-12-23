@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        {% set vars = getVariables('open_pdf_book') %}
+        <meta http-equiv="X-Ua-Compatible"content="IE=edge">
+        <meta name="keywords" content="moja zabawa, moja strona, wiersze">
+        <meta name="description" content="informacja do podstrony">
+
+        <title>Mirosław Mitka ({{vars.site_name}}: {{number_pdf}})</title>
+
+        <link rel="icon" href="/favico/favicon.ico?v=1.0"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favico/favicon-16x16.png">
+    
+        <link rel="manifest" href="/favico/site.webmanifest"> 
+        <link rel="stylesheet" href="/css/open_pdf.css">
+    </head>
+    <body>
+            <iframe src="/pdf_book/Mirosław Mitka - book - {{number_pdf}}.pdf" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" height="100%" width="100%"></iframe>
+
+{% set music = getVariables('music') %}
+{% set musicmax = music.num %}
+{% set musicnumber = random(0 , musicmax ) %}
+<div style="display:none">
+<iframe width="230" height="200" src="{{ music.song[musicnumber]}}" title="YouTube video player" allow="autoplay"></iframe>
+</div>
+    </body>
+</html>

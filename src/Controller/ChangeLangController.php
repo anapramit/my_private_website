@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ChangeLangController extends AbstractController{
     public function run(): Response
      {
+       
         if(!isset($_GET['lang']) || !isset($_GET['page'])) {
             header('Location: /');
             exit();

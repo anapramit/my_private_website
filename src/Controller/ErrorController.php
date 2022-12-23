@@ -8,6 +8,8 @@ class ErrorController extends AbstractController{
      {
         $langVars = \App\Lib\LanguageManager::getVariables('error_information');
         $error = $langVars['page_not_found'];
+        $response = new Response();
+        require ('Somefile.php');
         return $this->render('lucky/error_information.html.twig', [
             'error' => $error
         ]);

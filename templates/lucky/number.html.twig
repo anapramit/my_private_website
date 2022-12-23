@@ -13,6 +13,7 @@
         {% else %}
         <script src="/js/create-link.js" defer></script>
         {% endif %}
+        <script src="/js/text-lerght.js" defer></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <style>
           #recaptcha_image { width:auto !important; max-width: 100%; height: auto !important}
@@ -37,8 +38,8 @@
                 <p class="errors">{% if errors.old_link is defined %}{{ errors.old_link }} {% endif %}</p>
             </div>
             <div class="form-floating mb-3">
-                <label id="label_link" for="input_new_link">{{vars.descript_new}}</label>
-                <textarea type="text" class="form-control" id="input_new_link" name="new_link" placeholder="{{vars.descript_new_2}}" minlength="3" maxlength="2000">{% if is_empty != 1%}{{number.new_link}}{%endif%}</textarea>
+                <label id="label_link" for="input_new_link">{{vars.descript_new}} (0/1900)</label>
+                <textarea type="text" class="form-control" id="input_new_link" name="new_link" placeholder="{{vars.descript_new_2}}" minlength="3" maxlength="1900">{% if is_empty != 1%}{{number.new_link}}{%endif%}</textarea>
                 <p class="errors">{% if errors.new_link is defined %}{{ errors.new_link }} {% endif %}</p>
             </div>
             <div id="recaptcha-div">

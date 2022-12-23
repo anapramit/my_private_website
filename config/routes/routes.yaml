@@ -1,8 +1,7 @@
 # config/routes.yaml
 
-# the "app_lucky_number" route name is not important yet
 app_lucky_number:
-    path: /create-link
+    path: /
     controller: App\Controller\NumberController::number
 
 find_number:
@@ -21,6 +20,14 @@ haiku_Controller:
     path: /haiku
     controller: App\Controller\HaikuController::haiku
 
+story_Controller:
+    path: /story
+    controller: App\Controller\StoryController::story
+
+begin_book_Controller:
+    path: /begin-book
+    controller: App\Controller\BeginBookController::book
+
 help_Controller:
     path: /help
     controller: App\Controller\HelpController::help
@@ -35,4 +42,13 @@ go_link:
     requirements:
       token: .+
 
+open_pdf_list:
+    path:  /Mirosław_Mitka-story/{page}
+    controller: App\Controller\OpenPdfController::OpenPdf
+    condition:  "params['page'] >= 0 && params['page'] <= 3"
+
+open_pdf_list_book:
+    path:  /Mirosław_Mitka-book/{page}
+    controller: App\Controller\OpenPdfBookController::OpenPdfBook
+    condition:  "params['page'] >= 0 && params['page'] <= 0"
 

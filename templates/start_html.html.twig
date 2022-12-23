@@ -1,21 +1,27 @@
 <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">
         <meta http-equiv="X-Ua-Compatible"content="IE=edge">
-        <meta name="keywords" content="moja zabawa, moja strona, wiersze">
-        <meta name="description" content="informacja do podstrony">
 
+        <meta name="robots" content="{{vars.robots}}">
+        <meta name="keywords" content="{{vars.keywords}}">
+        <meta name="description" content="{{vars.description}}">
+        <meta name="author" content="Mirosław Mitka">
+        <meta name="copyright" content="Mirosław Mitka">
+        
         <title>{{vars.site_name}}</title>
-
         <link rel="icon" href="/favico/favicon.ico?v=1.0"/>
         <link rel="apple-touch-icon" sizes="180x180" href="/favico/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favico/favicon-16x16.png">
-       
-        <link rel="manifest" href="/favico/site.webmanifest"> 
+        <link rel="icon" type="image/png" sizes="16x16" href="/favico/favicon-16x16.png"> 
+        <link rel="manifest" href="/favico/site.webmanifest">  
 
+        <meta name="apple-mobile-web-app-title" content="NewTo">
+        <meta name="mobile-web-app-capable" content="yes"> 
+        {% set frends = getVariables('frends') %}
+        <!-- {{frends.thx_frends}}-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,4 +1,7 @@
 {
+    "robots": "noindex",
+    "keywords": "",
+    "description": "Ta strona wyświetla się tylko wtedy kiedy coś jest nie tak.",
     "site_name": "Wystapił błąd",
     "err_database": "Wystąpił problem z połączeniem",
     "err_link_invalid": "Nieprawidłowy link",

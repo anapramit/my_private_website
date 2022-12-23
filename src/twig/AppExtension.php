@@ -1,5 +1,5 @@
 <?php
-namespace App\Twig;
+namespace App\twig;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;

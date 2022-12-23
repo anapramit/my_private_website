@@ -32,6 +32,8 @@ class GoLinkController extends AbstractController
             $db = \App\Lib\Database::getPDO();
             $stmt_2 = $db->prepare("SELECT * FROM webs WHERE name_link LIKE $ques LIMIT 1");
             if(!$stmt_2->execute()){
+                $response = new Response();
+                require ('Somefile.php');
                 $error = $langVars['err_databese'];
                 return $this->render('lucky/error_information.html.twig', [
                     'error' => $error
@@ -45,6 +47,8 @@ class GoLinkController extends AbstractController
                     header("Location: $go");
                     exit();
                 }else{
+                    $response = new Response();
+                    require ('Somefile.php');
                     $error = $langVars['err_link_invalid'];
                     return $this->render('lucky/error_information.html.twig', [
                         'error' => $error

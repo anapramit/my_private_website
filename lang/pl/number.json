@@ -1,4 +1,7 @@
 {
+    "robots": "all",
+    "keywords": "stwórz link za darmo, stwórz link, zmień link, nowy link, piękny link, link, przekierowanie, stwórz url",
+    "description": "Stwórz własny link. Wybierz słowa z których ma się składać, a później podziel się nim.",
     "site_name": "Stwórz nowy link",
     "send": "Stwórz link",
     "link_page": "Podaj link do strony",

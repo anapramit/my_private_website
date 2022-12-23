@@ -1,4 +1,7 @@
 {
+    "robots": "noindex",
+    "keywords": "",
+    "description": "This page is only displayed when something is wrong.",
     "site_name": "Error occured",
     "err_database": "There is a maintenance problem",
     "err_link_invalid": "Invalid link",

@@ -1,14 +1,15 @@
 {
-    "site_name": "Check the link",
-    "send": "Check the link",
-    "link_page": "Provide a link to check",
+    "robots": "all",
+    "keywords": "sprawdź link, dokąd prowadzi link, co ukrywa się pod linkiem, czy link jest bezpieczny, sprawdzenie linku, bezpieczny link",
+    "description": "Sprawdź do czego prowadzi link, który został ci wysłany.",
+    "site_name": "Sprawdź link",
+    "send": "Sprawdź link",
+    "link_page": "Podaj link do sprawdzenia",
 
-    "err_link_invalid": "Invalid link",
-    "err_empty": "Empty field",
-    "err_wrong_recaptcha": "Are you a bot?",
-    "err_database": "There is a maintenance problem",
-    "copy_link": "Copy link",
-    
-    "create_succes": "The given link exists. Here's what it leads to:",
-    "err_link_not_exist": "Such a link does not exist."
+    "err_link_invalid": "Nieprawidłowy link",
+    "err_empty": "Puste pole",
+    "err_wrong_recaptcha": "Jesteś botem?",
+    "err_database": "Wystąpił problem z połączeniem",
+    "copy_link": "Kopiuj",
+    "create_succes": "Ten link istneje. Oto co cię pod nim skrywa:"
 }
