@@ -11,14 +11,6 @@ class PornoListOfAps {
         $information_folder = json_decode(file_get_contents($start_path . "Folder_Safe_List_Aps/Porno_List_Aps/json_Safe_List_Of_Aps.json"), true);
         $number_list_safe = $information_folder['json_number_list_safe'];
         $list_safe = $information_folder['json_list_safe'];
-        // $number_list_safe = 5;
-        // $list_safe = array(
-        //     1 => 'pornhub.com',
-        //     2 => 'www.xvideos.com',
-        //     3 => 'xhamster.com',
-        //     4 => 'www.xnxx.com', 
-        //     5 => 'chaturbate.com' 
-        // );
 
             for($i = 1; $i <= $number_list_safe; $i++){
                 $query = '/^https:\/\/' . $list_safe[$i] . '\//';
@@ -41,13 +33,7 @@ class PornoListOfAps {
             $information_folder = json_decode(file_get_contents($start_path . "Folder_Safe_List_Aps/Porno_List_Aps/json_Safe_List_Of_Aps_Lang.json"), true);
             $number_list_safe = $information_folder['json_number_list_safe'];
             $list_safe = $information_folder['json_list_safe'];
-            // $number_list_safe = 4;
-            // $list_safe = array(
-            //     1 => 'pornhub.com',
-            //     2 => 'bongacams.com',
-            //     3 => 'redtube.com',
-            //     4 => 'xhamster.com'
-            // );
+
 
             for($i = 1; $i <= $number_list_safe; $i++){
 
