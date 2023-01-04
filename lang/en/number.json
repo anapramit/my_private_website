@@ -1,6 +1,6 @@
 {
     "robots": "all",
-    "keywords": "create link free, create link, change link, new link, beautiful link, link, redirect, create url",
+    "keywords": "emistic, create link free, create link, change link, new link, beautiful link, link, redirect, create url",
     "description": "Create your own link. Choose the words you want it to consist of and then share it.",
     "site_name": "Create a new link",
 
@@ -8,14 +8,15 @@
     "link_page": "Link to the page",
 
     "descript_new": "Hide link content. Let the fun begin:",
-    "descript_new_2": "Enter a new link, e.g.:        Under this link hides the most beautiful woman",
+    "descript_new_2": "Enter a new link, e.g.:        Under this link hides the most beautiful person 😵",
     "copy_link": "Copy link",
     "create_succes": "The link has been created! Now you can share it",
 
     "err_link_invalid": "Invalid link",
     "err_empty": "Empty field",
-    "err_link_special_characters": "Illegal characters are ",
+    "err_link_special_characters": "Illegal characters are \" ; <$> \\'",
     "err_wrong_recaptcha": "Are you a bot?",
     "err_database": "There is a maintenance problem",
-    "err_alredy_link": "There is already such a link. Please enter a new one"
+    "err_alredy_link": "There is already such a link. Please enter a new one",
+    "err_safe_list_aps": "This site is not on the list of secure sites. Contact me if you want it changed"
 }

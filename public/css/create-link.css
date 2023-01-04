@@ -6,7 +6,7 @@
 
     .div-create-link {
         width: fit-content;
-        max-width: 600px;
+        max-width: 1000px;
         padding: 20px;
         margin-left: auto;
         margin-right: auto;
@@ -14,14 +14,15 @@
         border-width: 5px;
         border-color: #a07811;
         background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%, rgba(121,89,9,1) 100%);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0, 0, 0) 100%, rgb(61, 58, 50) 100%);
         border-radius: 10px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     #input_old_link{
         min-height: 50px;
     }
+
     #input_new_link {
         height: 200px;
     }
@@ -30,9 +31,9 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%, rg
     }
 
     #input_new_link,  #input_old_link {
-        background: rgb(156, 156, 156);
+        background: rgb(180, 169, 69);
         color:black;
-        width: 500px;
+        width: 950px;
       }
     
     .input-submit {
@@ -57,7 +58,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%, rg
         background: rgb(114, 114, 150);
     }
    
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1000px){
     #input_new_link,  #input_old_link {
         width: 100%;
       }
@@ -81,12 +82,14 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%, rg
     color: rgb(168, 197, 100);
     margin-top:30px;
     margin-bottom:10px;
+    font-family: 'serif', cursive;
     font-size: 19px;
     font-weight:700;
   }
   .link-send-1 {
     color: rgb(42, 131, 42);
     margin-top:30px;
+    font-family: 'serif', cursive;
     margin-bottom:10px;
     font-size: 19px;
     font-weight:700;
@@ -103,4 +106,29 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%, rg
         margin-bottom: 20px;
         background-color: rgb(228, 213, 213);
         cursor: pointer;
+  }
+
+  input:focus {
+    outline: none !important;
+    border:2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 5px #a1fff7;
+  }
+
+  textarea:focus {
+    outline: none !important;
+    border:2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 5px #a1fff7;
+  }
+
+  input {
+    padding-left: 10px;
+    border: none;
+    font-family: 'Patua One', cursive;
+    font-size: 18px;
+  }
+  textarea {
+    padding: 10px;
+    border: none;
+    font-family: 'Patua One', cursive;
+    font-size: 18px;
   }

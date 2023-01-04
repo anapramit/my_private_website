@@ -2,5 +2,26 @@
     "robots": "noindex",
     "keywords": "link którego szukasz, pomoc tworzenia linków",
     "description": "Kliknij jeśli nie rozumiesz jak powstają nowe linki.",
-    "site_name": "Pomoc"
+    "site_name": "Pomoc",
+
+    "title_text": {
+        "1": "Prawa autorskie",
+        "2": "Dźwięk/muzyka",
+        "3": "Linki dla zabawy",
+        "4": "Linki komercyjne",
+        "5": "Bezpieczne strony",
+        "6": "Kontakt"
+    },
+
+    "text_all": {
+        "1": "Twórcą opowiadań, wierszy, kodu strony, oraz haiku zamieszczony na stronie jest Mirosław Mitka.",
+        "2": "Podczas korzystania ze strony czasami będziesz słyszał(a) dźwięki. Są one udostepnmiane dzięki możliwością jakie daje Youtube. Jeśli naruszam prawa autorskie do konkternego utworu proszę o kontakt. Link zostanie usunięty.<br/><br/> Sprawdzenie nazwy utworu i wykonawcy: Najedź na ikonke przeglądarki na pasku zadań. ",
+        "3": "Stwórz link, rozśmiesz odbiorców. Wszystko za sprawą tego co napisałeś. Ciekawe dokąd będzie proawadił link. Dobrej zabawy. <br/><br/>Tworzenie linków na stronie jest darmowe. ",
+        "4": "Możesz także tworzyć linki o charakterze komercyjnym, które usprawnią prowadzenie twojego biznesu. <br/><br/>Tworzenie linków na stronie jest darmowe. ",
+        "5": "Dzięki liście <strong> bezpiecznych stron </strong> osoby klikające w link <strong> Emistic </strong> nie są narażone  na próby wyłudzeń, kradzieży. Niebezpieczeństwo przekierowań na niebezpieczne strony przestaje istnieć. Pod linkiem emistic mogą znajdować się tylko <strong>zatwierdzone strony</strong>.<br/><br/>Jeśli uznajesz że strona do której chcesz dodać link jest bezpieczna, a mimo to nie znajduje się na bezpiecznej liście skontaktój się ze mną. Dopóki strona nie jest na bezpiecznej liście Emistic uniemożliwia tworzenie linków które by do niej prowadziły. ",
+        "6": "Kontakt dostępny przez "
+    },
+    "number_text_all" : "6",
+    "contact_1": "Instagram.",
+    "contact_2": "Linkedin."
 }

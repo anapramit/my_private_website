@@ -4,6 +4,10 @@ for (var i = 0; i < 3; i++){
     let idAddre = "lang-" + changelag ;
     document.getElementById(idAddre).addEventListener('click', function changeLanguage(){
         let lang = changelag; 
-        document.getElementById('lang-' + lang).href = '/change-lang?lang=' + lang + '&page=' + window.location.pathname;
+        document.getElementById('lang-' + lang).href = '/change-lang?lang=' + lang + '&page=' + window.location.pathname + window.location.search;
     })
 }
+
+
+
+  

@@ -11,5 +11,6 @@
     "err_wrong_recaptcha": "Jesteś botem?",
     "err_database": "Wystąpił problem z połączeniem",
     "copy_link": "Kopiuj",
-    "create_succes": "Ten link istneje. Oto co cię pod nim skrywa:"
+    "create_succes": "Ten link istneje. Oto co cię pod nim skrywa:",
+    "err_link_not_exist": "Taki link nie istnieje."
 }

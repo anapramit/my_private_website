@@ -8,13 +8,14 @@
         <link rel="stylesheet" href="/css/create-link.css">
         <link rel="stylesheet" href="/css/find-link.css">
         <link rel="stylesheet" href="/css/recaptcha.css">
-    
+        <link rel="stylesheet" href="/css/loader.css">
      {% if is_send_link is defined %}
       <script src="/js/copy-link.js" defer></script>
       {% else %}
         <script src="/js/create-link.js" defer></script>
     {% endif %}
-      
+      <script src="/js/loader.js" defer></script>
+      <script src="/js/validator-empty.js" defer></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <style>
           #recaptcha_image { width:auto !important; max-width: 100%; height: auto !important}
@@ -24,32 +25,40 @@
 <body>
 
 {% include 'nawigation.html.twig' %}
+<div>
+    {% if is_send_link is defined %}
+        <div class="div-create-link">
+        <p class="link-send-1">{{ vars.create_succes }}</p>
+        <p class="link-send-2" id="link-send" data-type="{{is_send_link}}">{{ is_send_link }}</p>
+        <button class="input-submit" id="copy-link"> {{vars.copy_link}}</button>
+        </div>
+    {% else %}
+        <div class="div-create-link">
+            <form method="post" action="">
+                <div>
+                    <input type="url" id="input_old_link" name="old_link" placeholder="{{vars.link_page}}" value="{{number.old_link}}" minlength="6" maxlength="2000">
+                    <p class="errors">{% if errors.old_link is defined %}{{ errors.old_link }} {% endif %}</p>
+                </div>
+                <div id="change-loader">
+                    <div id="recaptcha-div">
+                        <div class="g-recaptcha" id="recaptcha" data-sitekey="{{ getCaptchaPublicKey2() }}" data-theme="dark"></div>
+                        <p class="errors">{% if errors.recaptcha is defined %}{{ errors.recaptcha }}{%endif%}</p>
+                    </div>
+                    <input type="submit" id="send-form" class="input-submit" value="{{vars.send}}" disabled="true">
+                </div>
+                <p class="errors">{% if errors.database is defined %}{{ errors.database }} {% endif %}</p>
+            </form>
+        </div>
+    {% endif %}
 
-{% if is_send_link is defined %}
-    <div class="div-create-link">
-    <p class="link-send-1">{{ vars.create_succes }}</p>
-    <p class="link-send-2" id="link-send" data-type="{{is_send_link}}">{{ is_send_link }}</p>
-    <button class="input-submit" id="copy-link"> {{vars.copy_link}}</button>
-    </div>
-{% else %}
-    <div class="div-create-link">
-        <form method="post" action="">
-            <div class="form-floating mb-3">
-                <input type="url" class="form-control" id="input_old_link" name="old_link" placeholder="{{vars.link_page}}" value="{{number.old_link}}" minlength="6" maxlength="2000">
-                <p class="errors">{% if errors.old_link is defined %}{{ errors.old_link }} {% endif %}</p>
-            </div>
-            <div id="recaptcha-div">
-                <div class="g-recaptcha" id="recaptcha" data-sitekey="{{ getCaptchaPublicKey2() }}" data-theme="dark"></div>
-                <p class="errors">{% if errors.recaptcha is defined %}{{ errors.recaptcha }}{%endif%}</p>
-            </div>
-            <input type="submit" class="input-submit" value="{{vars.send}}">
-            <p class="errors">{% if errors.database is defined %}{{ errors.database }} {% endif %}</p>
-        </form>
-    </div>
-{% endif %}
+    <div id="information-validator" data-type="send-form" data-type1="1" data-type2="input_old_link"></div>
 
-{% set cookies = getVariables('cookies') %}
-<div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
+    {% set loader = getVariables('loader') %}
+    <div id="information-loader" data-type1="{{loader.name}}" data-type2="change-loader" data-type3="send-form"></div>
+
+    {% set cookies = getVariables('cookies') %}
+    <div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
+</div>
 
 {% include 'footer.html.twig' %}
 </body>

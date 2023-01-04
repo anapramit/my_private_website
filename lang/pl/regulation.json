@@ -2,5 +2,18 @@
     "robots": "noindex",
     "keywords": "Stwórz zaskakujący link, link przykuwający uwagę",
     "description": "Zasady działania strony i tworzenia w niej nowych linków.",
-    "site_name": "Zasady tworzenia linków"
+    "site_name": "Zasady tworzenia linków",
+
+    "title_text": {
+        "1": "Zasady tworzenia linków",
+        "2": "Regulamin strony",
+        "3": "Pliki cookies"
+    },
+
+    "text_all": {
+        "1": "1. Tworzenie linków jest darmowe. <br/> 2. Link może składać się maksymalnie z 1900 znaków. <br> 3. Link nie mogą zawierać następujących znaków \" ; <$> ' <br/>4. Spacja w linkach jest zastępowana znakiem _  ",
+        "2": "1. <strong>Emistic </strong>jest miejscem gdzie możesz bezpłatnie tworzyć własne linki. Strona umożliwia także przeglądanie teksów autora strony. <br/><br/>2. <strong>Twórz linki</strong><br/>Tworzenie linków jest darmowe. Dzięki prowadzeniu przez Emistic listy bezpiecznych stron osoba używająca linków Emistic może być przekierowana tylko na bezpieczne strony. W każdej chwili link może zostać usunięty ze wzgledów bezpieczeństwa.<br/><br/>3. <strong>Przekierowanie linków </strong><br/>Strona umożliwia tworzenie linków prowadzących do stron trzecich. Emistic nie odpowiada za treści i działania zamiesczone na stronie do której prowadzi link. <br/><br/>4. <strong>Sprawdź link</strong> <br/>Strona umożliwia sprawdzenie do jakiej strony trzeciej prowadzi podany link. <br/><br/>5. <strong>Pozostałe treści</strong> <br/>Wszystkie teksty zamieszone na stronie są autorstwa Mirosława Mitki.<br/><br/> 6. <strong>Informacje końcowe</strong> <br/>Administratorem danych jest twórca i właściciel strony (Mirosław Mitka). <br/>Przebywając na stronie akceptujesz regulamin strony. <br/> Administrator zastrzega sobie możliwość zmiany regulaminu.",
+        "3": "Strona wykorzystuje tylko niezbędne pliki cookies.  Administratorem danych jest właściciel strony. "
+    },
+    "number_text_all" : "3"
 }

@@ -1,6 +1,7 @@
 if(window.onload = 'load'){ 
   textLerght();
 }
+
   let textarea = document.getElementById("input_new_link");
   
   textarea.addEventListener('keyup',  textLerght);
@@ -15,3 +16,4 @@ function textLerght(){
   let newInfo = first + "(" + lengthTextArea + "/1900)";
   document.getElementById("label_link").innerText = newInfo;
     }
+    

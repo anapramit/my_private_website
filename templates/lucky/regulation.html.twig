@@ -4,14 +4,28 @@
         {% set vars = getVariables('regulation') %}
        
         {% include 'start_html.html.twig' %}
-
+         <link rel="stylesheet" href="/css/help.css">
+        <script src="/js/help-text.js" defer></script>
     </head>   
 <body>
 
 {% include 'nawigation.html.twig' %}
+<div>
+  <div class="class-begin-book">
+    {% for i in 1..vars.number_text_all %}
+        <div class="Help-Text" id="Help-Text-{{i}}">
+          {{vars.title_text[i]}}
+        </div>
+          <div class="Help-Text-display" id="{{i}}">
+            {% autoescape false %}  {{vars.text_all[i]}}  {%endautoescape%}
+          </div>
+    {% endfor %}
+  </div>
+  <div id="help-text" data-type1="" data-type2="{{vars.number_text_all}}"></div>
 
-{% set cookies = getVariables('cookies') %}
-<div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
+  {% set cookies = getVariables('cookies') %}
+  <div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
+</div>
 
 {% include 'footer.html.twig' %}
 

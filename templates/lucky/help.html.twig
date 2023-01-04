@@ -4,36 +4,37 @@
         {% set vars = getVariables('help') %}
        
         {% include 'start_html.html.twig' %}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/css/help.css">
+        <script src="/js/help-text.js" defer></script>
     </head>   
 <body>
 
 {% include 'nawigation.html.twig' %}
-<div class="class-begin-book">
-      <p>
-        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          Link with href
-        </a>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+<div>
+  <div class="class-begin-book">
+    {% for i in 1..vars.number_text_all %}
+      <div class="Help-Text" id="Help-Text-{{i}}">
+          {{vars.title_text[i]}}
         </div>
-      </div>
-      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
-        Link with href
-      </a>
-    </p>
-    <div class="collapse" id="collapseExample2">
-      <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-      </div>
-    </div>
+    {% if i == vars.number_text_all %}
+          <div class="Help-Text-display" id="{{i}}">
+           <a href="https://www.instagram.com/young_fascinare/?next=%2F"><img src="/icons/instagram.svg" style="width:50px; height:50px;"></a>
+            {% autoescape false %}  {{vars.text_all[i]}} {{vars.contact_1}} {%endautoescape%}
+             <br/>
+              <a href="https://www.linkedin.com/young_fascinare/?next=%2F"><img src="/icons/linkedin.svg" style="width:50px; height:50px;"></a>
+              {% autoescape false %}  {{vars.text_all[i]}}  {{vars.contact_2}}  {%endautoescape%}
+          </div>
+    {% else %}
+            <div class="Help-Text-display" id="{{i}}">
+              {% autoescape false %}  {{vars.text_all[i]}}  {%endautoescape%}
+            </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <div id="help-text" data-type1="" data-type2="{{vars.number_text_all}}"></div>
+  {% set cookies = getVariables('cookies') %}
+  <div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
 </div>
-
-{% set cookies = getVariables('cookies') %}
-<div id="information-cookies" data-type="{{cookies.cooki_1}}" data-type2="{{cookies.cooki_2}}" data-type3="{{cookies.cooki_3}}" data-type4="{{cookies.cooki_4}}"></div>
 
 {% include 'footer.html.twig' %}
 

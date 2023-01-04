@@ -1,0 +1,107 @@
+.adult-class{
+    width:100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0e0e0;
+    border-radius: 100px;
+    position: absolute;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    pointer-events:auto;
+      background: conic-gradient(rgb(126, 126, 126), rgb(143, 93, 1),rgb(2, 177, 2), rgb(139, 91, 2), rgb(1, 196, 1), rgb(119, 78, 1), rgb(126, 126, 126));
+        }
+    
+        @media screen and (max-height:660px) and (max-width: 370px){
+            .adult-class{ 
+                position: static;
+                top: none;
+                left: none;
+                transform: none;
+                margin-left: auto;
+                margin-bottom: auto;
+            }
+        }
+
+        @media screen and (max-height: 600px){
+            .adult-class{ 
+                position: static;
+                top: none;
+                left: none;
+                transform: none;
+                margin-left: auto;
+                margin-bottom: auto;
+            }
+        }
+
+        @media screen and (min-width:1601px) {
+            .adult-class{
+            width: 1600px;
+            }
+        }
+        .adult-class-2 {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .adult-class-button {
+           cursor: pointer;
+            margin: 5px;
+            background-color: #f2fcff;
+        }
+    
+        .adult-class-button:hover {
+            background-color: #4faa04;
+            background: linear-gradient(90deg,rgb(30, 255, 0),blue); 
+        }
+
+
+        .adult-text {
+          font-size: 19px;
+        }
+
+
+        .class-begin-book {
+            margin-top: 10px;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .class-begin-book, body {
+          --s: 150px;    /* size */
+          --c1: #1d1c1b; 
+          --c2: #171818; 
+          --c3: #111111; 
+          
+          --_g: 50%,#0000 37%,var(--c1) 39% 70%,#0000 72%;
+          --_t: 50%,var(--c2) 40deg,var(--c3) 0 140deg,var(--c2) 0 180deg,#0000 0; 
+          --_s: 47% 50% at;
+          background: 
+            radial-gradient(var(--_s) -10% var(--_g)) 0 calc(var(--s)/4),
+            radial-gradient(var(--_s) -10% var(--_g)) calc(var(--s)/4) 0,
+            radial-gradient(var(--_s) 110% var(--_g)),
+            radial-gradient(var(--_s) 110% var(--_g)) calc(var(--s)/2) calc(var(--s)/2),
+            conic-gradient(from   0deg at 55% var(--_t)) calc(var(--s)/9) 0,
+            conic-gradient(from 180deg at 45% var(--_t)) calc(var(--s)/9) 0,
+            var(--c2);
+          background-size: var(--s) var(--s);
+        }
+        
+        nav {
+          background:linear-gradient(90deg,rgb(143, 3, 3),rgb(1, 1, 100));  
+        }
+        
+        footer {
+            background:linear-gradient(90deg,rgb(143, 3, 3),rgb(1, 1, 100));
+        }
+        #menu-poetry, #menu-poetry-2, #dropdownleft1 {
+            background:linear-gradient(90deg,rgb(143, 3, 3),rgb(1, 1, 100));;
+          border:none;
+        }
+        
+        .dropdown-item {
+          color:#000000;
+        }

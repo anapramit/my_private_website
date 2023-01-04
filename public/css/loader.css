@@ -1,0 +1,20 @@
+.loader {
+    margin-left: auto;
+    margin-right: auto;
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid rgb(255, 255, 255);
+    background: 16px  linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 100%, rgb(224, 220, 207) 100%);
+    border-right: 16px solid rgb(0, 0, 0);
+    border-bottom: 16px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    color: navajowhite;
+    background-color: aqua;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

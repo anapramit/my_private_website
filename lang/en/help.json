@@ -2,5 +2,26 @@
     "robots": "noindex",
     "keywords": "the link you are looking for, link building help",
     "description": "Click here if you don't understand how new links are created.",
-    "site_name": "Help"
+    "site_name": "Help",
+  
+    "title_text": {
+        "1": "Copyright",
+        "2": "Sound/Music",
+        "3": "Links for fun",
+        "4": "Commercial links",
+        "5": "Secure sites",
+        "6": "Contact"
+    },
+
+    "text_all": {
+        "1": "The creator of the stories, poems, website code, and haiku posted on the website is Mirosław Mitka.",
+        "2": "You will occasionally hear noises while using the site. They are made available thanks to the possibilities offered by Youtube. If I infringe the copyright of a specific work, please contact me. The link will be removed.<br/><br/> Check the name of the song and artist: Hover over the browser icon in the taskbar.",
+        "3": "Create a link and make your recipient surprised/amused. All because of what you wrote and where the link goes. Have fun. <br/><br/>Creating links on the site is free.",
+        "4": "You can also create commercial links that will improve your business. <br/><br/>Creating links on the site is free.",
+        "5": "Thanks to the list of <strong> safe pages </strong>, people clicking on the <strong> Emistic </strong> link are not exposed to attempts of extortion or theft. The danger of being redirected to unsafe sites ceases to exist. Only <strong>approved sites</strong> can be found under the emistic link.<br/><br/>If you believe that the page you want to link to is safe, but it is not on the safe list, please contact me . Until a page is on the safe list, Emistic prevents the creation of links that would lead to it.",
+        "6": "Contact available via "
+    },
+    "number_text_all" : "6",
+    "contact_1": "Instagram.",
+    "contact_2": "Linkedin."
 }

@@ -17,10 +17,10 @@ class GoLinkController extends AbstractController
         $langVars = \App\Lib\LanguageManager::getVariables('error_information');
         //
         if(!empty($where_go)) {     
-            if(mb_strlen($where_go) > 1900 || mb_strlen($where_go) < 5) {
+            if(mb_strlen($where_go) > 1900 || mb_strlen($where_go) < 3) {
                 $is_true = false;
             }
-            if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]/', $where_go)){
+            if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]|[\\\]/', $where_go)){
                 $is_true = false;
             }
          }else{
@@ -43,9 +43,17 @@ class GoLinkController extends AbstractController
                 $data = $stmt_2->fetch(\PDO::FETCH_ASSOC);
                 $how_obtained = $stmt_2-> rowCount();
                 if($how_obtained == 1 && !empty($data)){
-                    $go = $data['to_website'];
-                    header("Location: $go");
-                    exit();
+                    $naumber_aplication = \App\Lib\PornoListOfAps::PornoListOfAps($data['to_website']);
+                        if($naumber_aplication != 0){
+                            return $this->render('lucky/adult_information.html.twig', [
+                                'to_website' => $data['to_website']
+                            ]);
+                            exit();
+                        }else{
+                            $go = $data['to_website'];
+                            header("Location: $go");
+                            exit();
+                        }
                 }else{
                     $response = new Response();
                     require ('Somefile.php');

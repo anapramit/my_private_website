@@ -9,16 +9,12 @@ $policy = "default-src 'self'; object-src 'self'; font-src 'self' data: blob: 's
  $response->headers->set('cache-control', "private, no-cache, no-store, must-revalidate");
  $response->headers->set('x-frame-options', "SAMEORIGIN");
  $response->headers->set('x-content-type-options', "nosniff");
- $response->headers->set('document-policy', "force-load-at-top");
+//  $response->headers->set('document-policy', "force-load-at-top");
  $response->headers->set('x-powered-by', "Express");
  $response->headers->set('strict-transport-security', "max-age=15552000");
  $response->headers->set('sec-fetch-site', "none");
  // only Safari
  $response->headers->set('x-xss-protection', "0");
-
-//feature-policy
-  $policy_feature = "accelerometer 'none'; ambient-light-sensor 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; sync-xhr 'none'; usb 'none'; vibrate 'none'; vr 'none'";
-  $response->headers->set('feature-policy', $policy_feature);
 
  $name_some_file = \App\Lib\PathWebsiteAndFile::pathwebsite(2);
  $response->headers->set('origin', $name_some_file);

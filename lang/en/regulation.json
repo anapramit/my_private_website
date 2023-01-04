@@ -2,5 +2,18 @@
     "robots": "noindex",
     "keywords": "Create a surprising link, an eye-catching link",
     "description": "Rules of operation of the website and creating new links in it.",
-    "site_name": "Link building rules"
+    "site_name": "Link building rules",
+
+    "title_text": {
+        "1": "Linking rules",
+        "2": "Website regulations",
+        "3": "Cookies"
+    },
+
+    "text_all": {
+        "1": "1. Link building is free. <br/> 2. The link may contain up to 1900 characters. <br> 3. Links cannot contain the following characters \" ; <$> ' <br/>4. Space in links is replaced with _",
+        "2": "1. <strong>Emistic</strong>is a place where you can create your own links for free. The site also allows you to browse the texts of the site's author. <br/><br/>2. <strong>Create links</strong><br/>Creating links is free. Thanks to Emistic's maintenance of a list of safe pages, a person using Emistic's links can be redirected only to safe pages. The link may be removed at any time for security reasons.<br/><br/>3. <strong>Link redirection</strong><br/>This site allows you to create links to third parties. Emistic is not responsible for the content and activities posted on the page to which the link leads. <br/><br/>4. <strong>Check link</strong> <br/>The website allows you to check which third party a given link leads to. <br/><br/>5. <strong>Other content</strong> <br/>All texts on the website are written by Mirosław Mitka.<br/><br/> 6. <strong>Final information</strong> <br/>The data administrator is the creator and website owner (Miroslaw Mitka). <br/>By staying on the site, you accept the site's regulations. <br/> The administrator reserves the right to change the regulations.",
+        "3": "The website uses only necessary cookies. The data administrator is the website owner."
+    },
+    "number_text_all" : "3"
 }

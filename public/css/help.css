@@ -7,16 +7,36 @@
     width: 100%;
     height: 100%;
 }
-
-.btn-primary {
-    background: rgb(145, 145, 145);
-    color: rgb(0, 0, 0);
-    border: none;
+  .Help-Text {
+    background: rgb(41, 58, 56);
+    background:linear-gradient(90deg,rgb(19, 19, 19),rgb(50, 54, 54));
+    color: rgb(255, 255, 255);
+    border-style: solid;
+        border-width: 5px;
+        border-color: #000000;
     width:100%;
     text-align: left;
+    font-size:18px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .Help-Text:hover{
+    background: rgb(94, 250, 255);
+    border-color: rgb(80, 110, 96);
+    color: rgb(0, 0, 0);
   }
 
-.btn-primary.collapsed {
-    background: rgb(37, 37, 37)
+  .Help-Text-display {
+    display: none;
+    background: rgb(78, 84, 87);
+    font-size:18px;
+    color: rgb(10, 9, 9);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-right: none;
+    border-left: none;
+    border-color: #8d8d31;
   }
-

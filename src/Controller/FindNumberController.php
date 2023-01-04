@@ -44,7 +44,6 @@ class FindNumberController extends AbstractController
                     $how_obtained = $stmt_2-> rowCount();
                     if($how_obtained == 1 && !empty($data)){
                          $go = urldecode($data['to_website']);
-                         $js = 1;
                          return $this->render('lucky/find_number.html.twig', [
                             'is_send_link' => $go,
                             'number' => $number,
@@ -87,7 +86,7 @@ class FindNumberController extends AbstractController
                     if(!filter_var($value, FILTER_VALIDATE_URL) || mb_strlen($value) > 2000 || mb_strlen($value) < 3) {
                         $errors->set($key, $langVars['err_link_invalid']);
                     }
-                    if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]/', $value)){
+                    if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]|[\\\]/', $value)){
                         $errors->set($key, $langVars['err_link_invalid']);
                     }
                     $name = \App\Lib\PathWebsiteAndFile::pathwebsite(3);

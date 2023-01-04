@@ -4,9 +4,6 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-
-// ...
-
 class NumberController extends AbstractController
 {
     public function number(): Response
@@ -100,11 +97,18 @@ class NumberController extends AbstractController
                     if(!filter_var($value, FILTER_VALIDATE_URL) || mb_strlen($value) > 2000 || mb_strlen($value) < 3) {
                         $errors->set($key, $langVars['err_link_invalid']);
                     }
-                    if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]/', $value)){
+                    if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]|[\\\]/', $value)){
                         $errors->set($key, $langVars['err_link_invalid']);
-                    }
-                    if(!preg_match('/^https:\/\//', $value)){
-                        $errors->set($key, $langVars['err_link_invalid']);
+                    }else{
+                         if(!preg_match('/^https:\/\//', $value)){
+                             $errors->set($key, $langVars['err_link_invalid']);
+                         }else {
+                            // use safe list of apps
+                            $naumber_aplication = \App\Lib\SafeListOfAps::SafeListOfAps($value);
+                            if($naumber_aplication != 1){
+                                $errors->set($key, $langVars['err_safe_list_aps']);
+                            }
+                         }
                     }
         
                  }else{
@@ -113,10 +117,10 @@ class NumberController extends AbstractController
                 break;
                 case 'new_link':
                     if(!empty($value)) {     
-                    if(mb_strlen($value) > 1900 || mb_strlen($value) < 5) {
+                    if(mb_strlen($value) > 1900 || mb_strlen($value) < 3) {
                         $errors->set($key, $langVars['err_link_invalid']);
                     }
-                    if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]/', $value)){
+                    if(preg_match('/["]|[\']|[;]|[<]|[>]|[\$]|[\\\]/', $value)){
                         $errors->set($key, $langVars['err_link_special_characters']);
                     }
                  }else{

@@ -1,10 +1,11 @@
 {% set naw = getVariables('nawigation') %}
 <div class="down--px">
   <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button id="nav-menu-information" class="nav-menu-information" data-type="0">
+        <img id="nav-menu-img" class="nav-menu-img" src="/icons/menu.svg" style="width:50px; height:30px;">
       </button>
-    
+     <a href="/haiku" id="favicon-nav-m" class="favicon-nav-m"><img src="/favico/android-chrome-192x192.png" style="width:30px; height:30px;"></a>
+   
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto" id="center-nav">
             <li class="nav-item dropdown">
@@ -13,9 +14,9 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="menu-poetry">
                 <a class="dropdown-item" href="/poetry">{{naw.poetry}}</a>
-                <a class="dropdown-item" href="/story">{{naw.stories}}</a>
-                 <a class="dropdown-item" href="/haiku">{{naw.haiku}}</a>
+                <a class="dropdown-item" href="/haiku">{{naw.haiku}}</a>
                 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/story">{{naw.stories}}</a>
                 <a class="dropdown-item" href="/begin-book">{{naw.first_chapter}}</a>
               </div>
             </li>

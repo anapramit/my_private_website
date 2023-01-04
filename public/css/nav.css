@@ -1,4 +1,3 @@
-
 #center-nav {
 margin-left: auto;
 margin-right: auto;
@@ -30,3 +29,16 @@ margin-bottom: 90px;
 .menu-book:hover {
     background-color: rgb(47, 151, 192);
 }
+
+.nav-menu-information {
+    background: rgb(92, 78, 78);
+    cursor: pointer;
+}
+    
+.nav-menu-img {
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+  }
+
+ .nav-menu-information { 
+display:none; 
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% set vars = getVariables('adult_information') %}
+
+        {% include 'start_html.html.twig' %}
+        
+         <link rel="stylesheet" href="/css/adult_information.css">
+    </head>   
+<body>
+
+{% include 'nawigation.html.twig' %}
+<div class="class-begin-book">
+    <div class="adult-class">
+        <img src="/icons/rocket_launch.svg"> 
+        <div> 
+            <h4></h4>
+            <p class="adult-text">{{vars.information}}</p>
+            <div class="adult-class-2">
+                <a href="/"><button type="button" class="adult-class-button"> {{vars.no}} </button></a>
+                <a href="{{to_website}}"><button type="button" class="adult-class-button"> {{vars.yes}} </button></a>
+            </div>
+        </div>
+              
+    </div>
+  </div> 
+
+
+{% include 'footer.html.twig' %}
+</body>
+</html>
