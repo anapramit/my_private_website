@@ -50,6 +50,8 @@
                     <div class="g-recaptcha" id="recaptcha" data-sitekey="{{ getCaptchaPublicKey() }}" data-theme="dark"></div>
                     <p class="errors">{% if errors.recaptcha is defined %}{{ errors.recaptcha }}{%endif%}</p>
                 </div>
+                <input type="hidden" name="number_information" value="{{seconds_time}}">
+                <input type="hidden" name="tokenek" value="{{this_token}}">
                 <input type="submit" id="send-form" class="input-submit" value="{{vars.send}}" disabled="true">
             </div>
             <p class="errors">{% if errors.database is defined %}{{ errors.database }} {% endif %}</p>

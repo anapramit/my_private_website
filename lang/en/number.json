@@ -7,8 +7,8 @@
     "send": "Create link",
     "link_page": "Link to the page",
 
-    "descript_new": "Hide link content. Let the fun begin:",
-    "descript_new_2": "Enter a new link, e.g.:        Under this link hides the most beautiful person 😵",
+    "descript_new": "Create a new link. Let the fun begin:",
+    "descript_new_2": "Enter new link content, e.g.:        The most beautiful person 😵",
     "copy_link": "Copy link",
     "create_succes": "The link has been created! Now you can share it",
 

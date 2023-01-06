@@ -7,7 +7,6 @@ class SafeListOfAps {
 
     public static function SafeListOfAps($aps_url) {
         $is_true = 0;
-       // $number_list_safe = 231;
        
         $start_path = \App\Lib\PathWebsiteAndFile::pathwebsite(1);
         $information_folder = json_decode(file_get_contents($start_path . "Folder_Safe_List_Aps/Safe_List_Aps/json_Safe_List_Of_Aps.json"), true);

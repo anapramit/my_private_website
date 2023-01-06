@@ -12,5 +12,6 @@
     "err_database": "Wystąpił problem z połączeniem",
     "copy_link": "Kopiuj",
     "create_succes": "Ten link istneje. Oto co cię pod nim skrywa:",
-    "err_link_not_exist": "Taki link nie istnieje."
+    "err_link_not_exist": "Taki link nie istnieje.",
+    "err_link_invalid_emistic": "Nieprawidłowy link. Możesz sprawdzić tylko linki Emistic."
 }

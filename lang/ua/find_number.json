@@ -10,8 +10,8 @@
     "err_empty": "Порожнє поле",
     "err_wrong_recaptcha": "ти бот?",
     "err_database": "Є проблема з обслуговуванням",
-    "copy_link": "Kopiuj",
-    
+    "copy_link": "Копіювати посилання",
     "create_succes": "Дане посилання існує. Ось до чого це призводить:",
-    "err_link_not_exist": "Такого посилання не існує."
+    "err_link_not_exist": "Такого посилання не існує.",
+    "err_link_invalid_emistic": "Недійсне посилання. Ви можете перевіряти лише посилання Emistic."
 }

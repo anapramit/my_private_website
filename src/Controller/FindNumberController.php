@@ -8,6 +8,12 @@ class FindNumberController extends AbstractController
 
     public function FindNumber(): Response
     {
+        //token 
+        if(!isset($_SESSION['token_user']))
+        {
+            $_SESSION['token_user'] = \App\Lib\GenerateUserToken::generateUserToken();
+        }
+
         $is_exist_get = \App\Lib\IsGetMethod::IsGetMethod();
         if($is_exist_get == 1){
             header('Location: /find-link');
@@ -17,10 +23,49 @@ class FindNumberController extends AbstractController
         $number['old_link'] = '';
         $response = new Response();
         require ('Somefile.php');
-        if(isset($_POST['old_link']) && isset($_POST['g-recaptcha-response'])){
+        if(isset($_POST['old_link']) && isset($_POST['g-recaptcha-response']) 
+         && isset($_POST['tokenek']) && isset($_POST['number_information'])){
             $where_go = htmlspecialchars($_POST['old_link']);
             $number['old_link'] = $where_go;
-            $number['g-recaptcha'] = $_POST['g-recaptcha-response'];
+            $number['g-recaptcha'] = htmlspecialchars($_POST['g-recaptcha-response']);
+           
+            //bot traps: time 
+            $_POST['number_information'] = htmlspecialchars($_POST['number_information']);
+            
+            $is_good_bot_traps = \App\Lib\VeryficationBotTraps::UseBotTime($_POST['number_information'], 2);
+            unset($_POST['number_information']);
+            if($is_good_bot_traps == 0)
+            { 
+                $seconds_time = \App\Lib\VeryficationBotTraps::BotCreateTime();
+                $_SESSION['token_user'] =\App\Lib\GenerateUserToken::generateUserToken();
+                return $this->render('lucky/find_number.html.twig', [
+                    'number' => $number,
+                    'this_token' => $_SESSION['token_user'],
+                    'seconds_time' => $seconds_time
+                ]);
+                exit();
+            }
+
+            //token 
+            $new_tokenek = \App\Lib\GenerateUserToken::generateUserToken();
+            $_POST['tokenek'] = htmlspecialchars($_POST['tokenek']);
+              
+               if($_SESSION['token_user'] === $_POST['tokenek']){
+                    $_SESSION['token_user'] = $new_tokenek;
+                    unset($_POST['tokenek']);
+               }
+               else
+               {
+                    $_SESSION['token_user'] = $new_tokenek;
+                    $seconds_time = \App\Lib\VeryficationBotTraps::BotCreateTime();
+                    return $this->render('lucky/find_number.html.twig',[
+                        'errors' => $errors,
+                        'number' => $number,
+                        'this_token' => $_SESSION['token_user'],
+                        'seconds_time' => $seconds_time
+                        ]);
+                        exit();
+               }
             
             $langVars = \App\Lib\LanguageManager::getVariables('find_number');
 
@@ -58,16 +103,23 @@ class FindNumberController extends AbstractController
                     }
                 }
             }else{
+                $seconds_time = \App\Lib\VeryficationBotTraps::BotCreateTime();
                 return $this->render('lucky/find_number.html.twig', [
                     'errors' => $errors,
                     'number' => $number,
+                    'this_token' => $_SESSION['token_user'],
+                    'seconds_time' => $seconds_time
                 ]);
                 exit();
             }
-        }else{   
+        }else{  
+            $_SESSION['token_user'] = \App\Lib\GenerateUserToken::generateUserToken();       
+            $seconds_time = \App\Lib\VeryficationBotTraps::BotCreateTime();
             return $this->render('lucky/find_number.html.twig',[
             'errors' => $errors,
-            'number' => $number
+            'number' => $number,
+            'this_token' => $_SESSION['token_user'],
+            'seconds_time' => $seconds_time
             ]);
             exit();
         
@@ -92,7 +144,7 @@ class FindNumberController extends AbstractController
                     $name = \App\Lib\PathWebsiteAndFile::pathwebsite(3);
                     $query = '/^' . $name . '\/__/';
                     if(!preg_match($query, $value)){
-                        $errors->set($key, $langVars['err_link_invalid']);
+                        $errors->set($key, $langVars['err_link_invalid_emistic']);
                     }
         
                  }else{

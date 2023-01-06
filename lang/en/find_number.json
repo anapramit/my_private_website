@@ -11,7 +11,7 @@
     "err_wrong_recaptcha": "Are you a bot?",
     "err_database": "There is a maintenance problem",
     "copy_link": "Copy link",
-    
     "create_succes": "The given link exists. Here's what it leads to:",
-    "err_link_not_exist": "Such a link does not exist."
+    "err_link_not_exist": "Such a link does not exist.",
+    "err_link_invalid_emistic": "Invalid link. You can only check Emistic links."
 }
